@@ -24,6 +24,7 @@ const validatePassword = (password: string): string => {
 
 interface ILoginFormProps {
     onLoginClose: () => void;
+    onForgotPassword: () => void;
 }
 
 export function Login (props: ILoginFormProps) {
@@ -62,7 +63,7 @@ export function Login (props: ILoginFormProps) {
             </label>
         </fieldset>
         <div>
-            <button>
+            <button onClick={props.onForgotPassword}>
                 Forgot you password?
             </button>
         </div>
