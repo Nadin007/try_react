@@ -53,12 +53,18 @@ export function Login (props: ILoginFormProps) {
         <fieldset>
             <label>
                 Email
-                <input value={email} onInput={(e) => {setEmail(e.currentTarget.value)}} placeholder='example@email.com'></input>
+                <input value={email} onInput={(e) => {
+                    setEmail(e.currentTarget.value);
+                    setEmailError("");
+                    }} placeholder='example@email.com'></input>
                 {emailError === "" ? undefined : <span>{emailError}</span>}
             </label>
             <label>
                 Password
-                <input value={password} onInput={(e) => {setPassword(e.currentTarget.value)}} type="password"></input>
+                <input value={password} onInput={(e) => {
+                    setPassword(e.currentTarget.value);
+                    setPasswordError("");
+                    }} type="password"></input>
                 {passwordError === "" ? undefined : <span>{passwordError}</span>}
             </label>
         </fieldset>
