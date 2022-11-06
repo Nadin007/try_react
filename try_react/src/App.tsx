@@ -11,27 +11,31 @@ function App() {
   let [isOpen, setIsOpen] = useState(false);
   let [isOpenForgotPassword, setIsOpenForgotPassword] = useState(false);
   let [comments, setComments] = useState([]);
+  let [currentAmount, setCurrentAmount] = useState(5);
+  let [allCommentsAmmount, setAllCommentsAmmount] = useState(0);
 
   let onLoginShow = useCallback(() => {setIsOpen(!isOpen)}, [ isOpen ])
+  let onLoadMoreComments = useCallback(() => {setCurrentAmount(currentAmount + 5)}, [ currentAmount ])
   let onForgotPassword = useCallback(() => {setIsOpenForgotPassword(!isOpenForgotPassword)}, [ isOpenForgotPassword ]);
   useEffect(() => {
     let abortToken = new AbortController();
     fetch("./comments.json", {signal: abortToken.signal})
         .then((response) => response.ok ? response.json() : Promise.reject(response.status))
         .then(comments => {
-            setComments(comments);
+            setAllCommentsAmmount(comments.length);
+            setComments(comments.slice(0, currentAmount));
         });
     return () => {
         abortToken.abort();
     };  
-  }, []);
+  }, [ currentAmount ]);
   return <>
       <LandPage onLoginShow={onLoginShow}/>
       {isOpen ? <Login onLoginClose={() => {setIsOpen(false)}} onForgotPassword={() => {
           setIsOpenForgotPassword(true); setIsOpen(false) }}/> : undefined}
 
       {isOpenForgotPassword ? <ForgotRassword onForgotPassword={onForgotPassword}/> : undefined}
-      <Comments comments={comments}/>
+      <Comments loadMoreComments={onLoadMoreComments} amountOfComments={allCommentsAmmount} comments={comments}/>
     </>;
 }
 

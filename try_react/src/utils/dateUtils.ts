@@ -1,3 +1,4 @@
+const minMS = 60 * 1000;
 const hourMS = 60 * 60 * 1000;
 const dayMS = 24 * hourMS;
 
@@ -9,5 +10,9 @@ export const dateToHumanReadibleFormat = (date: string) : string => {
         return new Intl.DateTimeFormat().format(new Date(date));
     }
     let hours = Math.floor(diff / hourMS);
-    return new Intl.RelativeTimeFormat("en").format(-hours, "hour");
+    if (hours > 1) {
+        return new Intl.RelativeTimeFormat("en").format(-hours, "hour");
+    }
+    let minutes = Math.max(Math.floor(diff / minMS), 1);
+    return new Intl.RelativeTimeFormat("en").format(-minutes, "minute")
 }

@@ -43,7 +43,7 @@ export function Comment (props: ICommentProps) {
             <p className="m-b-5 m-t-10">{props.comment.text}</p>
             {isRepliesOpened || props.comment.comments.length === 0 ? undefined : <RepliesButton loadComments={loadComments} comments={props.comment.comments}></RepliesButton>}
             <div>
-                {isRepliesOpened && props.comment.comments.length > 0 ? <Comments comments={props.comment.comments}/> : undefined}
+                {isRepliesOpened && props.comment.comments.length > 0 ? <Comments loadMoreComments={() => {}} amountOfComments={props.comment.comments.length} comments={props.comment.comments}/> : undefined}
             </div>
         </div>
     </div>
