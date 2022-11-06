@@ -1,0 +1,106 @@
+[{
+    "article_id": 1,
+    "id": 1,
+    "date": "2020-03-10T04:00:00.000Z",
+    "title": "first",
+    "text": "my first comment",
+    "user": {
+        "first_name": "FNuser_1",
+        "last_name": "LNuser_1",
+        "user_img": "https://cdn.dribbble.com/users/49910/screenshots/4431133/attachments/1006779/avatar_01.png?compress=1&resize=800x600&vertical=top",
+        "id": 1
+    },
+    "comments": [
+        {
+            "article_id": 1,
+            "id": 2,
+            "date": "2020-03-10T04:00:00.000Z",
+            "title": "second",
+            "text": "my second comment",
+            "user": {
+                "first_name": "FNuser_2",
+                "last_name": "LNuser_2",
+                "user_img": "https://cdn.dribbble.com/users/49910/screenshots/4431133/attachments/1006783/avatar_03.png",
+                "id": 2
+            },
+            "comments": [
+                {
+                    "article_id": 1,
+                    "id": 3,
+                    "date": "2020-03-10T04:00:00.000Z",
+                    "title": "forth",
+                    "text": "my forth comment. jriegjre reo jaijgwreoiugatuhgfbcvkf mfkfdz; efdv fbjg vkkdarvfajbngvb dgbgr bhgda df vn jhgv kernmtbn grnbfv fnfavzsegvhrNVKFVkFMbrnfb nabt gbht.",
+                    "user": {
+                        "first_name": "FNuser_1",
+                        "last_name": "LNuser_1",
+                        "user_img": "https://cdn.dribbble.com/users/49910/screenshots/4431133/attachments/1006779/avatar_01.png?compress=1&resize=800x600&vertical=top",
+                        "id": 1
+                    },
+                    "comments": [
+                        
+                    ]
+                },
+                {
+                    "article_id": 1,
+                    "id": 4,
+                    "date": "2020-03-12T04:00:00.000Z",
+                    "title": "third",
+                    "text": "my third comment",
+                    "user": {
+                        "first_name": "FNuser_3",
+                        "last_name": "LNuser_3",
+                        "user_img": "https://cdn.dribbble.com/users/49910/screenshots/4431133/attachments/1006784/avatar_04.png?compress=1&resize=800x600&vertical=top",
+                        "id": 3
+                    },
+                    "comments": [
+                        
+                    ]
+                },
+                {
+                    "article_id": 1,
+                    "id": 6,
+                    "date": "2020-03-12T04:00:00.000Z",
+                    "title": "cdsfjd",
+                    "text": "vjvjfvdf fjvjvfffvmfn nt.",
+                    "user": {
+                    "first_name": "FNuser_1",
+                    "last_name": "LNuser_1",
+                    "user_img": "https://cdn.dribbble.com/users/49910/screenshots/4431133/attachments/1006779/avatar_01.png?compress=1&resize=800x600&vertical=top",
+                    "id": 1
+                    },
+                    "comments": []
+                },
+                {
+                    "article_id": 1,
+                    "id": 7,
+                    "date": "2020-04-12T04:00:00.000Z",
+                    "title": "flkvrdfkgvfjg f",
+                    "text": "vkdfvodfvfdvfjDGJFJEFK TFBJ TGBNGK GH BGBG GD DF.",
+                    "user": {
+                        "first_name": "FNuser_1",
+                        "last_name": "LNuser_1",
+                        "user_img": "https://cdn.dribbble.com/users/49910/screenshots/4431133/attachments/1006779/avatar_01.png?compress=1&resize=800x600&vertical=top",
+                        "id": 1
+                    },
+                    "comments": []
+                }
+            ]
+        },
+        {
+            "article_id": 1,
+            "id": 5,
+            "date": "2022-11-06T12:18:59.333Z",
+            "title": "fifth",
+            "text": "vfklvsf rjgfkvfxcv fkvmfvnfg vfkmvfkmvfdkbf hf fdhvfavfjkavd jkdhvjdfhgh g hdfgsdfhdsl hdgdskgjjkdfhgf jhhgjh gjffjlfg hf gjvdag afdgjsdh fgfhjghfdgfladksjg rdfhg dgfhdgad gbfn dgdah fdd arffhg farfchrf gfghargkvnfbcvafjdm vbdfnvf.",
+            "user": {
+                "first_name": "FNuser_3",
+                "last_name": "LNuser_3",
+                "user_img": "https://cdn.dribbble.com/users/49910/screenshots/4431133/attachments/1006784/avatar_04.png?compress=1&resize=800x600&vertical=top",
+                "id": 3
+            },
+            "comments": [
+                
+            ]
+        }
+    ]
+}]
