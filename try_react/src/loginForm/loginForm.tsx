@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "./loginForm.css";
+import iconClose from 'bootstrap-icons/icons/x-lg.svg';
 
 const emailPattern = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
 
@@ -45,38 +47,40 @@ export function Login (props: ILoginFormProps) {
         }
     };
 
-    return <dialog open>
-        <div>
-            <button onClick={props.onLoginClose}>Close</button>
+    return <>
+    <dialog open className='login-form'>
+        <div className='d-flex justify-content-end'>
+            <button className='btn-close' onClick={props.onLoginClose}></button>
         </div>
         <h3>Sign in with your Account</h3>
         <fieldset>
-            <label>
+            <label className='mb-3 row'>
                 Email
-                <input value={email} onInput={(e) => {
+                <input className='form-control input-custom' value={email} onInput={(e) => {
                     setEmail(e.currentTarget.value);
                     setEmailError("");
                     }} placeholder='example@email.com'></input>
                 {emailError === "" ? undefined : <span>{emailError}</span>}
             </label>
-            <label>
+            <label className='mb-3 row'>
                 Password
-                <input value={password} onInput={(e) => {
+                <input className='form-control input-custom' value={password} onInput={(e) => {
                     setPassword(e.currentTarget.value);
                     setPasswordError("");
                     }} type="password"></input>
                 {passwordError === "" ? undefined : <span>{passwordError}</span>}
             </label>
         </fieldset>
-        <div>
-            <button onClick={props.onForgotPassword}>
-                Forgot you password?
-            </button>
-        </div>
-        <div>
-            <button onClick={submit}>
+        <div className='row d-grid gap-2 mx-auto'>
+
+            <button className='btn btn-outline-success' onClick={submit}>
                 Sign In
             </button>
+            <button className='btn btn-link' onClick={props.onForgotPassword}>
+                Forgot you password?
+            </button>
+
         </div>
     </dialog>
+    </>
 }

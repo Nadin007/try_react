@@ -30,12 +30,15 @@ function App() {
     };  
   }, [ currentAmount ]);
   return <>
-      <LandPage onLoginShow={onLoginShow}/>
-      {isOpen ? <Login onLoginClose={() => {setIsOpen(false)}} onForgotPassword={() => {
+       
+       {isOpen ? <Login onLoginClose={() => {setIsOpen(false)}} onForgotPassword={() => {
           setIsOpenForgotPassword(true); setIsOpen(false) }}/> : undefined}
 
       {isOpenForgotPassword ? <ForgotRassword onForgotPassword={onForgotPassword}/> : undefined}
-      <Comments loadMoreComments={onLoadMoreComments} amountOfComments={allCommentsAmmount} comments={comments}/>
+    <div className={isOpen || isOpenForgotPassword ? "blurry" : ""}>
+        <LandPage onLoginShow={onLoginShow}/>
+        <Comments loadMoreComments={onLoadMoreComments} amountOfComments={allCommentsAmmount} comments={comments}/>
+    </div>      
     </>;
 }
 

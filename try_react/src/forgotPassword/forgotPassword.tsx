@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './forgotPassword.css'
 
 const emailPattern = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
 
@@ -36,23 +37,27 @@ export function ForgotRassword (props: IForgotPasswordProps) {
         }
     }
     
-    return <dialog open>
+    return <dialog open className='forgot-form'>
         <div>
-            <button onClick={props.onForgotPassword}>Close</button>
+            <div className='d-flex justify-content-end'>
+            <button className='btn-close' onClick={props.onForgotPassword}></button>
+            </div>
             <h2>Forgot Password</h2>
-            <p>Enter your account email.</p>
-            <p>Password change instructions will be sent to this email.</p>
-            <fieldset>
-                <label>Email
-                    <input value={email} onInput = {(e) => {
+            <div>Enter your account email.</div>
+            <div>Password change instructions will be sent to this email.</div>
+            <fieldset className='mt-2'>
+
+                <label className='mb-3 row'>Email
+                    <input className='form-control input-custom' value={email} onInput = {(e) => {
                         setEmail(e.currentTarget.value);
                         setemailError("");
                     }} placeholder='example@email.com'></input>
                     {emailError === "" ? undefined : <span>{emailError}</span>}
                 </label>
+
             </fieldset>
             <div>
-                <button onClick={submit}>Submit</button>
+                <button className='btn btn-outline-success' onClick={submit}>Submit</button>
             </div>
         </div>
     </dialog>
